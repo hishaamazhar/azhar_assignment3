@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class BMICalculator {
+	public static void main (String args[]) {
+		
+		System.out.println("Which BMI formula would you like to choose? Please enter the number of your option.\n");
+		System.out.println("\n1. BMI = (703 * weight in pounds)/(height in inches)^2\n");
+		System.out.println("1. BMI = weight in kilograms/(height in meters)^2");
+		
+		Scanner choiceInput = new Scanner(System.in);
+		int choice = choiceInput.nextInt();
+		
+		switch (choice) {
+			
+		case 1:
+			System.out.println("Please enter your height in inches: ");
+			Scanner heightInput = new Scanner(System.in);
+			float height = heightInput.nextFloat();
+			
+			System.out.println("Please enter your weight in pounds: ");
+			Scanner weightInput = new Scanner(System.in);
+			float weight = weightInput.nextFloat();
+			
+			int BMI = 
+		
+		case 2:
+			Scanner weightInput = new Scanner(System.in);
+			float weight = weightInput.nextFloat();
+			Scanner heightInput = new Scanner(System.in);
+			float height = heightInput.nextFloat();
+		
+		}
+	}
+}

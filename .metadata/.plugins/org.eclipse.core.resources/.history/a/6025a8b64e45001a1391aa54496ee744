@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Decrypter {
+	public static void main (String args[]) {
+		
+		Scanner firstDigitInput = new Scanner(System.in);
+		Scanner secondDigitInput = new Scanner(System.in);
+		Scanner thirdDigitInput = new Scanner(System.in);
+		Scanner fourthDigitInput = new Scanner(System.in);
+		
+		int firstDigit = firstDigitInput.nextInt();
+		int secondDigit = secondDigitInput.nextInt();
+		int thirdDigit = thirdDigitInput.nextInt();
+		int fourthDigit = fourthDigitInput.nextInt();
+		
+		firstDigit += 3;
+		secondDigit += 3;
+		thirdDigit += 3;
+		fourthDigit += 3;
+		
+		int temporaryFirst = firstDigit;
+		int temporarySecond = secondDigit;
+		
+		firstDigit = thirdDigit;
+		secondDigit = fourthDigit;
+		thirdDigit = temporaryFirst;
+		fourthDigit = temporarySecond;
+		
+		firstDigit %= 10;
+		secondDigit %= 10;
+		thirdDigit %= 10;
+		fourthDigit %= 10;
+		
+		System.out.printf("%d%d%d%d", firstDigit, secondDigit, thirdDigit, fourthDigit);		
+	}
+}

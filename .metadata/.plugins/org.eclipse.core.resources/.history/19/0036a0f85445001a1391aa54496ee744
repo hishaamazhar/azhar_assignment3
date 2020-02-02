@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Application {
+	public static void main (String args[]) {
+		
+		Scanner userInput = new Scanner(System.in);
+		int code = userInput.nextInt();
+		
+		int firstDigitsub = code % 1000;
+		int firstDigit = (code - firstDigitsub) / 1000;
+		
+		System.out.println(firstDigit);
+	}
+}

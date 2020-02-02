@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Encrypter {
+	public static void main (String args[]) {
+		
+		Scanner firstDigitInput = new Scanner(System.in);
+		Scanner secondDigitInput = new Scanner(System.in);
+		Scanner thirdDigitInput = new Scanner(System.in);
+		Scanner fourthDigitInput = new Scanner(System.in);
+		
+		int firstDigit = firstDigitInput.nextInt();
+		int secondDigit = secondDigitInput.nextInt();
+		int thirdDigit = thirdDigitInput.nextInt();
+		int fourthDigit = fourthDigitInput.nextInt();
+		
+		firstDigit += 7;
+		secondDigit += 7;
+		thirdDigit += 7;
+		fourthDigit += 7;
+		
+		firstDigit %= 10;
+		secondDigit %= 10;
+		thirdDigit %= 10;
+		fourthDigit %= 10;
+		
+		int temporaryFirst = firstDigit;
+		int temporarySecond = secondDigit;
+		
+		firstDigit = thirdDigit;
+		secondDigit = fourthDigit;
+		thirdDigit = temporaryFirst;
+		fourthDigit = temporarySecond;
+		
+		System.out.printf("%d-%d-%d-%d", firstDigit, secondDigit, thirdDigit, fourthDigit);
+	}
+}
+/* A company that wants to send data over the Internet
+has asked you to write a program that will encrypt it
+so that it may be transmitted more securely. All the
+data is transmitted as four-digit integers. Your
+application should read a four-digit integer entered by
+the user and encrypt it as follows: Replace each digit
+with the result of adding 7 to the digit and getting the
+remainder after dividing the new value by 10. Then swap
+the first digit with the third, and swap the second digit
+with the fourth. Then print the encrypted integer. Your
+application should also allow the user to enter an
+encrypted four-digit integer and then decrypt it (by
+reversing the encryption scheme) to form the
+original number. */

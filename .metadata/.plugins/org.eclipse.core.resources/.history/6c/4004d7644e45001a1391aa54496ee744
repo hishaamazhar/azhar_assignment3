@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Encrypter {
+	public static void main (String args[]) {
+		
+		Scanner userInput = new Scanner(System.in);
+		int code = userInput.nextInt();
+		
+		int firstDigitsub = code % 1000;
+		int firstDigit = (code - firstDigitsub) / 1000;
+		int secondDigitsub = code % 100;
+		int secondDigit = (code - firstDigitsub - secondDigitsub) / 100;
+		int thirdDigitsub = code % 10;
+		int thirdDigit = (code - firstDigitsub - secondDigitsub - thirdDigitsub) / 10;
+		int fourthDigit = (code - firstDigitsub - secondDigitsub - thirdDigitsub);
+		
+		firstDigit += 7;
+		secondDigit += 7;
+		thirdDigit += 7;
+		fourthDigit += 7;
+		
+		firstDigit %= 10;
+		secondDigit %= 10;
+		thirdDigit %= 10;
+		fourthDigit %= 10;
+		
+		int temporaryFirst = firstDigit;
+		int temporarySecond = secondDigit;
+		
+		firstDigit = thirdDigit;
+		secondDigit = fourthDigit;
+		thirdDigit = temporaryFirst;
+		fourthDigit = temporarySecond;
+		
+		System.out.printf("%d%d%d%d", firstDigit, secondDigit, thirdDigit, fourthDigit);
+	}
+}

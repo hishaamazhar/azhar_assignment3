@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Application {
+	public static void main (String args[]) {
+		
+		Scanner codeInput = new Scanner(System.in);
+		int code = codeInput.nextInt();
+		
+		Encrypter Encrypter = new Encrypter();
+		Encrypter.encrypt(code);
+		
+		System.out.println(Encrypter.encrypt(code));
+		
+		Decrypter Decrypter = new Decrypter();
+		Decrypter.decrypt(code);
+		
+		System.out.println(Decrypter.decrypt(int code));
+	}
+}

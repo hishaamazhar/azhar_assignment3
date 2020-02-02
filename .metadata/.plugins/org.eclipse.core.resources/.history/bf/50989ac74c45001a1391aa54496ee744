@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Application {
+	public static void main (String args[]) {
+		
+		Scanner Input = new Scanner(System.in);
+		int inputBruh = Input.nextInt();
+		int array[] = new int[4];
+		
+		int firstDigitsub = inputBruh % 1000;
+		int firstDigit = (inputBruh - firstDigitsub) / 1000;
+		
+		System.out.println(firstDigit);
+	}
+}
