@@ -1,6 +1,0 @@
-public class Encrypter {
-	public static void main(String args[]) {
-		Scanner buda = new Scanner();
-		System.out.println(buda);
-	}
-}
